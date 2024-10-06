@@ -17,6 +17,12 @@ function addValue(){
     saveData();
 }
 
+inputBox.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {  // Check if the key pressed is "Enter"
+                addValue();  // Trigger the addValue function
+            }
+        });
+
 listContiner.addEventListener("click", function(e){
     if (e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
